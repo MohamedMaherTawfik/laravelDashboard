@@ -135,6 +135,42 @@ class AdminController extends Controller
         }
 
     }
+    public function ShowAll(Request $request)
+    {
+        $table_name = $request->table_name;
+        if($table_name=='headers'){
+            $data = header::all();
+            return view('admin.showAll')->with('data', $data);
+        }
+        else if($table_name=='clients'){
+            $data = clients::all();
+            return view('admin.showAll')->with('data', $data);
+        }
+        else if($table_name=='abouts'){
+            $data = about::all();
+            return view('admin.showAll')->with('data', $data);
+        }
+        else if($table_name=='goals'){
+            $data = goals::all();
+            return view('admin.showAll')->with('data', $data);
+        }
+        else if($table_name=='services'){
+            $data = services::all();
+            return view('admin.showAll')->with('data', $data);
+        }
+        else if($table_name=='latests'){
+            $data = latest::all();
+            return view('admin.showAll')->with('data', $data);
+        }
+        else if($table_name=='partners'){
+            $data = partners::all();
+            return view('admin.showAll')->with('data', $data);
+        }
+        else if($table_name=='contacts'){
+            $data = contact::all();
+            return view('admin.showAll')->with('data', $data);
+        }
+    }
 
 
 }

@@ -37,11 +37,11 @@ $columns = Schema::getColumnListing($table_name);
 
                     @endforeach
                     <button type="submit" class="btn btn-primary">Submit</button>
-                    <button  class="btn btn-primary">Show All {{$table_name}}</button>
                 </form>
-
+                <button><a href="{{route('admin.ShowAll', ['table_name' => $table_name])}}" style="padding: 15px;">Show All {{$table_name}}</a></button>
             </div>
         </div>
+
         <!-- main-panel ends -->
     </div>
       <!-- page-body-wrapper ends -->
